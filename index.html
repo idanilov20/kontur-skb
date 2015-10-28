@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задание для СКБ Контур</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v1">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <script type="text/javascript" src="/scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/script.js?v1"></script>
+</head>
+<body onload="render (colsA,rowsA,colsB,rowsB);setFocus()">
+    <div id="matrix">
+        <div class="inline" id="left-block"> 
+            <button onclick="multiply()" id="multiply">Умножить матрицы</button>
+            <br/>
+            <button onclick="reset()" id="reset"> Очистить матрицы</button>
+            <br/>
+            <button onclick="change();setFocus()" id="change"> Поменять матрицы местами</button>
+            <br/>
+            <div class="radio">
+            <input onclick="radioBtnChange()" id="radioA" type="radio" name="matrix" value="Матрицы A" checked>
+            <label for="radioA">Матрицы A</label>
+            <input onclick="radioBtnChange()" id="radioB" type="radio" name="matrix" value="Матрицы B">
+            <label for="radioB">Матрицы B</label>
+            </div>
+            <br/>
+            <button onclick="addRow();setFocus()" class="addBtn" id="addRow"> Добавить</button>
+            <button onclick="delRow();setFocus()" class="delBtn" id="delRow"> Удалить</button> 
+            <label> Строку</label>
+            <br/>
+            <button onclick="addCol();setFocus()" class="addBtn" id="addCol"> Добавить</button>
+            <button onclick="delCol();setFocus()" class="delBtn" id="delCol"> Удалить</button>
+            <label> Столбец</label>
+            <br><br>
+            <div id="error"></div>
+        </div>
+        <div id="main">
+            <div class="inline" id="right-block">
+                <div id="reply"></div>
+                <div id="matrix-div-a"></div><br>
+                <div id="matrix-div-b"></div><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
