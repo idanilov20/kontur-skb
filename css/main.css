@@ -558,9 +558,7 @@ body,
     background: rgb(242, 242, 242);
     border: 1px solid #d9d9d9;
 }
-#right-block input::-webkit-input-placeholder,
-#right-block input::-moz-input-placeholder,
-#right-block input::input-placeholder
+#right-block input::-webkit-input-placeholder
 {
     font-size: 10px;
     line-height: 28px;
